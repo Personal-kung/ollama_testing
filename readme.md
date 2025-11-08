@@ -20,6 +20,7 @@ Tools used:
 |8|n8n|start runtime|`n8n start`|
 |9|telegram|creating a bot|[See Instructions to create bot](https://core.telegram.org/bots/tutorial)|
 |10|ollama|starting server|`ollama serve`|
+|11|ollama|running ollama in terminal|`ollama run <model>`
 ### Ngrok
 Run the following commands
 ```
