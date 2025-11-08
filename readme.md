@@ -7,9 +7,19 @@ Tools used:
 - ollama: AI assistant to process queries and do the "thinking"
 - Telegra: As GUI for interaction with container
 
-# Done in github Codespace
-## Installations
-
+# Codes
+|#|Tool|Step|Code|
+|:---:|:---:|:---|:---|
+|1|Ngrok|Installation|```curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \  \| sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \  && echo "deb https://ngrok-agent.s3.amazonaws.com bookworm main" \  \| sudo tee /etc/apt/sources.list.d/grok.list \  && sudo apt update \  && sudo apt install ngrok```|
+|2|n8n|Verify Node for installation|`node -v`<br> `npm -v`
+|3|n8n|Installation|`npm install n8n -g`|
+|4|Ollama|Installation|`curl -fsSL https://ollama.com/install.sh \| sh`|
+|5|ngrok|Configuration|`ngrok authtoken <YOUR_NGROK_AUTHTOKEN>`|
+|6|ngrok|Get custom HTTP|`ngrok hhtp 5678`|
+|7|n8n|setting HTTP connection|(option 1)`export WEBHOOK_URL=<FOWRARD HTTP>`<br>(option 2 **recommended for testing purposes**) `n8n start --tunnel`|
+|8|n8n|start runtime|`n8n start`|
+|9|telegram|creating a bot|[See Instructions to create bot](https://core.telegram.org/bots/tutorial)|
+|10|ollama|starting server|`ollama serve`|
 ### Ngrok
 Run the following commands
 ```
@@ -21,7 +31,7 @@ curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
   && sudo apt install ngrok
 ```
 
-### N8N
+### n8n
 - Verify node and npm version with the commands 
 ```
 node -v
@@ -44,7 +54,7 @@ No installation required
 Create a ngrok account in order to get an AUTHTOKEN and run the following command
 <br> `ngrok authtoken <YOUR_NGROK_AUTHTOKEN>`<br>
 
-### Setting N8N webhook
+### Setting n8n webhook
 1. Run command `export WEBHOOK_URL=<FOWRARD HTTP>` replace `<FORWARD HTTP>` with the URL obtained from NGROK
 2. Run command in terminal `n8n`
 3. In the ports tab, make the port associated with n8n public (port 5678 by default)
@@ -68,12 +78,15 @@ Then return to the previous terminal and run command `ollama run <model>` and th
 ### Ngrok
 Run the command `ngrok http 5678` in order to get a custom HTTP
 
-### N8N 
+### n8n 
+Run command `export WEBHOOK_URL=<FOWRARD HTTP>`
+<!-export WEBHOOK_URL=https://dilapidated-meagan-plumulose.ngrok-free.dev->
+
 Run command in terminal `n8n`
 
 ### Ollama
 Run command in terminal `ollama serve`
+
 *Its working with Run a command but not yet with a HTTP request*
 (Pending to determine best approach)
 
- 
