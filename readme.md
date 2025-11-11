@@ -76,18 +76,5 @@ Then return to the previous terminal and run command `ollama run <model>` and th
 
 ## Runtime starting
 
-### Ngrok
-Run the command `ngrok http 5678` in order to get a custom HTTP
-
-### n8n 
-Run command `export WEBHOOK_URL=<FOWRARD HTTP>`
-<!-export WEBHOOK_URL=https://dilapidated-meagan-plumulose.ngrok-free.dev->
-
-Run command in terminal `n8n`
-
-### Ollama
-Run command in terminal `ollama serve`
-
-*Its working with Run a command but not yet with a HTTP request*
-(Pending to determine best approach)
-
+### Creating markdown file
+https://github.com/user-attachments/assets/251ff748-e8f6-4e39-8c4d-793c7a03b20e
